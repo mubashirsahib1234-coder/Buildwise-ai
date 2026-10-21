@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BuildWise AI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fa;
+}
+
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#555;
+    margin-bottom:25px;
+}
+
+textarea{
+    width:80%;
+    max-width:800px;
+    height:150px;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 30px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.result{
+    margin:40px auto;
+    width:80%;
+    max-width:900px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    min-height:150px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    padding:50px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>BuildWise AI</h2>
+</header>
+
+<section class="hero">
+    <h1>AI Construction Expert</h1>
+
+    <p>
+        Architecture • BIM • Structural • BOQ • Inspection
+    </p>
+
+    <textarea id="userInput"
+    placeholder="Enter project requirements..."></textarea>
+
+    <br>
+
+    <button onclick="analyzeProject()">
+        Generate Analysis
+    </button>
+</section>
+
+<div class="result" id="result">
+    AI response will appear here...
+</div>
+
+<section class="services">
+
+<div class="card">
+<h3>Architecture</h3>
+<p>Floor Planning & Design</p>
+</div>
+
+<div class="card">
+<h3>BIM</h3>
+<p>Building Information Modeling</p>
+</div>
+
+<div class="card">
+<h3>Structural</h3>
+<p>Engineering Assistance</p>
+</div>
+
+<div class="card">
+<h3>Inspection</h3>
+<p>Defect Detection</p>
+</div>
+
+</section>
+
+<script>
+
+function analyzeProject(){
+
+let input = document.getElementById("userInput").value;
+
+if(input === ""){
+    alert("Please enter project requirements");
+    return;
+}
+
+document.getElementById("result").innerHTML = `
+<h3>Project Analysis</h3>
+
+<p><strong>Requirement:</strong> ${input}</p>
+
+<br>
+
+<p>✅ Architecture Review Required</p>
+
+<p>✅ Structural Review Required</p>
+
+<p>✅ BIM Model Recommended</p>
+
+<p>✅ BOQ Generation Recommended</p>
+
+<p>✅ Inspection Workflow Available</p>
+
+<br>
+
+<p>This is Version 1 Demo.</p>
+`;
+}
+
+</script>
+
+</body>
+</html>
