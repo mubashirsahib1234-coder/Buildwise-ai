@@ -3,177 +3,377 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>BuildWise AI</title>
 
+https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
 }
 
 body{
-    background:#f4f7fa;
+background:#0a0f1f;
+color:white;
 }
 
 header{
-    background:#0f172a;
-    color:white;
-    padding:20px;
-    text-align:center;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#3b82f6;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
 }
 
 .hero{
-    text-align:center;
-    padding:60px 20px;
+text-align:center;
+padding:100px 20px;
 }
 
 .hero h1{
-    font-size:48px;
-    margin-bottom:15px;
+font-size:65px;
+font-weight:800;
+}
+
+.hero span{
+color:#3b82f6;
 }
 
 .hero p{
-    color:#555;
-    margin-bottom:25px;
+margin-top:20px;
+color:#cbd5e1;
+font-size:20px;
 }
 
-textarea{
-    width:80%;
-    max-width:800px;
-    height:150px;
-    padding:15px;
-    border:1px solid #ccc;
-    border-radius:10px;
+.buttons{
+margin-top:30px;
 }
 
-button{
-    margin-top:20px;
-    padding:12px 30px;
-    background:#2563eb;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:16px;
+.btn{
+padding:15px 35px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+margin:10px;
 }
 
-button:hover{
-    background:#1d4ed8;
+.primary{
+background:#2563eb;
+color:white;
 }
 
-.result{
-    margin:40px auto;
-    width:80%;
-    max-width:900px;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-    min-height:150px;
+.secondary{
+background:white;
+color:black;
 }
 
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-    padding:50px;
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:50px 8%;
+}
+
+.stat{
+background:#111827;
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+.stat h2{
+font-size:40px;
+color:#3b82f6;
+}
+
+.skills{
+padding:80px 8%;
+}
+
+.skills-title{
+text-align:center;
+font-size:42px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-    text-align:center;
+background:#111827;
+padding:30px;
+border-radius:18px;
+transition:.3s;
 }
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.icon{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#cbd5e1;
+}
+
+.project{
+padding:80px 8%;
+}
+
+.project-box{
+background:#111827;
+padding:30px;
+border-radius:20px;
+}
+
+textarea{
+width:100%;
+height:180px;
+border:none;
+border-radius:15px;
+padding:20px;
+margin-top:20px;
+}
+
+.upload{
+margin-top:20px;
+}
+
+.generate{
+margin-top:20px;
+padding:15px 30px;
+background:#2563eb;
+border:none;
+border-radius:10px;
+color:white;
+cursor:pointer;
+}
+
+.output{
+margin-top:30px;
+background:#0f172a;
+padding:20px;
+border-radius:15px;
+}
+
+footer{
+margin-top:80px;
+padding:30px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.1);
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <h2>BuildWise AI</h2>
+
+<div class="logo">
+BuildWise AI
+</div>
+
+<nav>
+#Home</a>
+#Experts</a>
+#Projects</a>
+#Contact</a>
+</nav>
+
 </header>
 
 <section class="hero">
-    <h1>AI Construction Expert</h1>
 
-    <p>
-        Architecture • BIM • Structural • BOQ • Inspection
-    </p>
+<h1>
+Future of <span>Engineering</span>
+</h1>
 
-    <textarea id="userInput"
-    placeholder="Enter project requirements..."></textarea>
+<p>
+Architecture • Structural • BIM • BOQ • Inspection • CAD Automation
+</p>
 
-    <br>
+<div class="buttons">
 
-    <button onclick="analyzeProject()">
-        Generate Analysis
-    </button>
-</section>
+<button class="btn primary">
+Start Project
+</button>
 
-<div class="result" id="result">
-    AI response will appear here...
-</div>
+<button class="btn secondary">
+Book Demo
+</button>
 
-<section class="services">
-
-<div class="card">
-<h3>Architecture</h3>
-<p>Floor Planning & Design</p>
-</div>
-
-<div class="card">
-<h3>BIM</h3>
-<p>Building Information Modeling</p>
-</div>
-
-<div class="card">
-<h3>Structural</h3>
-<p>Engineering Assistance</p>
-</div>
-
-<div class="card">
-<h3>Inspection</h3>
-<p>Defect Detection</p>
 </div>
 
 </section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>50+</h2>
+<p>AI Experts</p>
+</div>
+
+<div class="stat">
+<h2>1000+</h2>
+<p>Projects Analyzed</p>
+</div>
+
+<div class="stat">
+<h2>95%</h2>
+<p>Automation Target</p>
+</div>
+
+</section>
+
+<section class="skills">
+
+<h2 class="skills-title">
+AI Engineering Experts
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🏠</div>
+<h3>Architecture AI</h3>
+<p>Floor Plans, Layouts, Design Concepts.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏗️</div>
+<h3>Structural AI</h3>
+<p>Load Checks, Structural Review.</p>
+</div>
+
+<div class="card">
+<div class="icon">📐</div>
+<h3>BIM AI</h3>
+<p>IFC Models and BIM Validation.</p>
+</div>
+
+<div class="card">
+<div class="icon">📊</div>
+<h3>BOQ AI</h3>
+<p>Material Quantity & Cost Estimation.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔎</div>
+<h3>Inspection AI</h3>
+<p>Crack Detection and Site Reports.</p>
+</div>
+
+<div class="card">
+<div class="icon">✅</div>
+<h3>Verification AI</h3>
+<p>Requirement & Error Validation.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="project">
+
+<div class="project-box">
+
+<h2>Create New Project</h2>
+
+<textarea
+id="prompt"
+placeholder="Describe your engineering project...">
+</textarea>
+
+<div class="upload">
+
+<input type="file">
+
+</div>
+
+<button
+class="generate"
+onclick="runAI()">
+
+Analyze Project
+
+</button>
+
+<div
+class="output"
+id="output">
+
+AI output will appear here...
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 BuildWise AI Platform
+
+</footer>
 
 <script>
 
-function analyzeProject(){
+function runAI(){
 
-let input = document.getElementById("userInput").value;
+let prompt =
+document.getElementById("prompt").value;
 
-if(input === ""){
-    alert("Please enter project requirements");
-    return;
-}
+document.getElementById("output").innerHTML =
 
-document.getElementById("result").innerHTML = `
+`
 <h3>Project Analysis</h3>
 
-<p><strong>Requirement:</strong> ${input}</p>
+<p><b>Requirement:</b> ${prompt}</p>
 
-<br>
+<hr>
 
-<p>✅ Architecture Review Required</p>
+✅ Architecture Analysis Required
 
-<p>✅ Structural Review Required</p>
+✅ Structural Review Required
 
-<p>✅ BIM Model Recommended</p>
+✅ BOQ Preparation Recommended
 
-<p>✅ BOQ Generation Recommended</p>
+✅ BIM Modeling Recommended
 
-<p>✅ Inspection Workflow Available</p>
+✅ Site Verification Recommended
 
-<br>
-
-<p>This is Version 1 Demo.</p>
+✅ AI Risk Assessment Generated
 `;
+
 }
 
 </script>
