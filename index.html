@@ -8,243 +8,55 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter',sans-serif;
-}
+*{ margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+body{ background:#0a0f1f; color:white; }
 
-body{
-    background:#0a0f1f;
-    color:white;
-}
+header{ padding:20px 8%; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,.1); }
+.logo{ font-size:28px; font-weight:800; color:#3b82f6; }
+nav a{ color:white; text-decoration:none; margin-left:25px; transition: 0.3s; }
+nav a:hover{ color: #3b82f6; }
 
-header{
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid rgba(255,255,255,.1);
-}
+.hero{ text-align:center; padding:100px 20px; }
+.hero h1{ font-size:65px; font-weight:800; }
+.hero span{ color:#3b82f6; }
+.hero p{ margin-top:20px; color:#cbd5e1; font-size:20px; }
 
-.logo{
-    font-size:28px;
-    font-weight:800;
-    color:#3b82f6;
-}
+.buttons{ margin-top:30px; }
+.btn{ padding:15px 35px; border:none; border-radius:10px; cursor:pointer; font-size:16px; margin:10px; font-weight: 600; transition: 0.3s; }
+.btn:hover{ opacity: 0.8; transform: translateY(-2px); }
+.primary{ background:#2563eb; color:white; }
+.secondary{ background:white; color:black; }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    transition: 0.3s;
-}
+.stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:50px 8%; }
+.stat{ background:#111827; padding:30px; border-radius:15px; text-align:center; border: 1px solid rgba(255,255,255,0.05); }
+.stat h2{ font-size:40px; color:#3b82f6; }
 
-nav a:hover{
-    color: #3b82f6;
-}
+.skills{ padding:80px 8%; }
+.skills-title{ text-align:center; font-size:42px; margin-bottom:40px; }
+.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
+.card{ background:#111827; padding:30px; border-radius:18px; transition:.3s; border: 1px solid rgba(255,255,255,0.05); }
+.card:hover{ transform:translateY(-5px); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1); border-color: #3b82f6; }
+.icon{ font-size:45px; margin-bottom:15px; }
+.card h3{ margin-bottom:10px; }
+.card p{ color:#cbd5e1; }
 
-.hero{
-    text-align:center;
-    padding:100px 20px;
-}
+.project{ padding:80px 8%; }
+.project-box{ background:#111827; padding:30px; border-radius:20px; border: 1px solid rgba(255,255,255,0.05); }
+textarea{ width:100%; height:180px; border:none; border-radius:15px; padding:20px; margin-top:20px; font-family: 'Inter', sans-serif; font-size: 16px; resize: vertical; background: #1f2937; color: white; }
+textarea:focus{ outline: 2px solid #3b82f6; }
+.upload{ margin-top:20px; }
+.generate{ margin-top:20px; padding:15px 30px; background:#2563eb; border:none; border-radius:10px; color:white; cursor:pointer; font-size: 16px; font-weight: 600; transition: 0.3s; width: 100%; }
+.generate:hover{ background: #1d4ed8; }
+.generate:disabled{ background:#64748b; cursor:not-allowed; }
 
-.hero h1{
-    font-size:65px;
-    font-weight:800;
-}
+.output{ margin-top:30px; background:#0f172a; padding:20px; border-radius:15px; min-height: 100px; white-space: pre-wrap; border: 1px solid rgba(255,255,255,0.05); }
 
-.hero span{
-    color:#3b82f6;
-}
+footer{ margin-top:80px; padding:30px; text-align:center; border-top:1px solid rgba(255,255,255,.1); color: #cbd5e1; }
 
-.hero p{
-    margin-top:20px;
-    color:#cbd5e1;
-    font-size:20px;
-}
-
-.buttons{
-    margin-top:30px;
-}
-
-.btn{
-    padding:15px 35px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:16px;
-    margin:10px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn:hover{
-    opacity: 0.8;
-    transform: translateY(-2px);
-}
-
-.primary{
-    background:#2563eb;
-    color:white;
-}
-
-.secondary{
-    background:white;
-    color:black;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    padding:50px 8%;
-}
-
-.stat{
-    background:#111827;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.stat h2{
-    font-size:40px;
-    color:#3b82f6;
-}
-
-.skills{
-    padding:80px 8%;
-}
-
-.skills-title{
-    text-align:center;
-    font-size:42px;
-    margin-bottom:40px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:#111827;
-    padding:30px;
-    border-radius:18px;
-    transition:.3s;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
-    border-color: #3b82f6;
-}
-
-.icon{
-    font-size:45px;
-    margin-bottom:15px;
-}
-
-.card h3{
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#cbd5e1;
-}
-
-.project{
-    padding:80px 8%;
-}
-
-.project-box{
-    background:#111827;
-    padding:30px;
-    border-radius:20px;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-textarea{
-    width:100%;
-    height:180px;
-    border:none;
-    border-radius:15px;
-    padding:20px;
-    margin-top:20px;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    resize: vertical;
-    background: #1f2937;
-    color: white;
-}
-
-textarea:focus{
-    outline: 2px solid #3b82f6;
-}
-
-.upload{
-    margin-top:20px;
-}
-
-.generate{
-    margin-top:20px;
-    padding:15px 30px;
-    background:#2563eb;
-    border:none;
-    border-radius:10px;
-    color:white;
-    cursor:pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: 0.3s;
-    width: 100%;
-}
-
-.generate:hover{
-    background: #1d4ed8;
-}
-
-.output{
-    margin-top:30px;
-    background:#0f172a;
-    padding:20px;
-    border-radius:15px;
-    min-height: 100px;
-    white-space: pre-wrap;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-footer{
-    margin-top:80px;
-    padding:30px;
-    text-align:center;
-    border-top:1px solid rgba(255,255,255,.1);
-    color: #cbd5e1;
-}
-
-/* Loader CSS */
-.loader {
-    border: 4px solid #1f2937;
-    border-top: 4px solid #3b82f6;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+.loader { border: 4px solid #1f2937; border-top: 4px solid #3b82f6; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; margin: 20px auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 </style>
 </head>
-
 <body>
 
 <header>
@@ -261,67 +73,35 @@ footer{
     <h1>Future of <span>Engineering</span></h1>
     <p>Architecture • Structural • BIM • BOQ • Inspection • CAD Automation</p>
     <div class="buttons">
-        <button class="btn primary">Start Project</button>
+        <button class="btn primary" onclick="document.getElementById('prompt').scrollIntoView({behavior: 'smooth'})">Start Project</button>
         <button class="btn secondary">Book Demo</button>
     </div>
 </section>
 
 <section class="stats">
-    <div class="stat">
-        <h2>50+</h2>
-        <p>AI Experts</p>
-    </div>
-    <div class="stat">
-        <h2>1000+</h2>
-        <p>Projects Analyzed</p>
-    </div>
-    <div class="stat">
-        <h2>95%</h2>
-        <p>Automation Target</p>
-    </div>
+    <div class="stat"><h2>50+</h2><p>AI Experts</p></div>
+    <div class="stat"><h2>1000+</h2><p>Projects Analyzed</p></div>
+    <div class="stat"><h2>95%</h2><p>Automation Target</p></div>
 </section>
 
 <section class="skills">
     <h2 class="skills-title">AI Engineering Experts</h2>
     <div class="grid">
-        <div class="card">
-            <div class="icon">🏠</div>
-            <h3>Architecture AI</h3>
-            <p>Floor Plans, Layouts, Design Concepts.</p>
-        </div>
-        <div class="card">
-            <div class="icon">🏗️</div>
-            <h3>Structural AI</h3>
-            <p>Load Checks, Structural Review.</p>
-        </div>
-        <div class="card">
-            <div class="icon">📐</div>
-            <h3>BIM AI</h3>
-            <p>IFC Models and BIM Validation.</p>
-        </div>
-        <div class="card">
-            <div class="icon">📊</div>
-            <h3>BOQ AI</h3>
-            <p>Material Quantity & Cost Estimation.</p>
-        </div>
-        <div class="card">
-            <div class="icon">🔎</div>
-            <h3>Inspection AI</h3>
-            <p>Crack Detection and Site Reports.</p>
-        </div>
-        <div class="card">
-            <div class="icon">✅</div>
-            <h3>Verification AI</h3>
-            <p>Requirement & Error Validation.</p>
-        </div>
+        <div class="card"><div class="icon">🏠</div><h3>Architecture AI</h3><p>Floor Plans, Layouts, Design Concepts.</p></div>
+        <div class="card"><div class="icon">🏗️</div><h3>Structural AI</h3><p>Load Checks, Structural Review.</p></div>
+        <div class="card"><div class="icon">📐</div><h3>BIM AI</h3><p>IFC Models and BIM Validation.</p></div>
+        <div class="card"><div class="icon">📊</div><h3>BOQ AI</h3><p>Material Quantity & Cost Estimation.</p></div>
+        <div class="card"><div class="icon">🔎</div><h3>Inspection AI</h3><p>Crack Detection and Site Reports.</p></div>
+        <div class="card"><div class="icon">✅</div><h3>Verification AI</h3><p>Requirement & Error Validation.</p></div>
     </div>
 </section>
 
 <section class="project">
     <div class="project-box">
         <h2>Create New Project</h2>
+        <p style="color:#cbd5e1; margin-top:10px; font-size:14px;">Apni zuban (Urdu, Hindi, English) mein project likhein. Agar AI ko kuch samajh nahi aayega, wo khud aapse sawal poochega!</p>
         
-        <textarea id="prompt" placeholder="Describe your engineering project..."></textarea>
+        <textarea id="prompt" placeholder="Describe your engineering project... (e.g., I need a lighting plan for my 10 marla house)"></textarea>
         
         <div class="upload">
             <input type="file">
@@ -335,13 +115,11 @@ footer{
     </div>
 </section>
 
-<footer>
-    © 2026 BuildWise AI Platform
-</footer>
+<footer>© 2026 BuildWise AI Platform</footer>
 
 <script>
-// ⚠️ YAHAN AAPKA WORKER URL LAGA HUA HAI ⚠️
-const API_URL = "https://apikey.mubashirsahib1234.workers.dev/";
+// 🚨 YAHAN AAPKA URL LAGA HUA HAI 🚨
+const API_URL = "https://apikey.mubashirsahib1234.workers.dev/"; 
 
 async function runAI() {
     const prompt = document.getElementById("prompt").value;
@@ -353,38 +131,36 @@ async function runAI() {
         return;
     }
 
-    // Loading State
-    outputDiv.innerHTML = `<div class="loader"></div><p style="text-align:center; color:#cbd5e1;">AI aapke project ka analysis kar raha hai...</p>`;
+    outputDiv.innerHTML = `<div class="loader"></div><p style="text-align:center; color:#cbd5e1;">BuildWise AI aapke project ka analysis kar raha hai...</p>`;
     btn.disabled = true;
     btn.innerText = "Analyzing...";
 
     try {
-        // API Call to Cloudflare Worker
         const response = await fetch(API_URL, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ prompt: prompt })
         });
 
         const data = await response.json();
 
-        // Agar response mein jawab mila
-        if (data.candidates && data.candidates[0].content.parts[0].text) {
-            const aiResponse = data.candidates[0].content.parts[0].text;
-            // Format text to HTML (line breaks)
-            outputDiv.innerHTML = `<h3 style="color:#3b82f6; margin-bottom:15px;">AI Analysis Report</h3><p>${aiResponse.replace(/\n/g, '<br>')}</p>`;
-        } else if (data.error) {
-            outputDiv.innerHTML = `<p style="color:#ef4444;">Error: ${data.error}</p>`;
-        } else {
-            outputDiv.innerHTML = `<p style="color:#ef4444;">Maaf kijiyega, AI se sahi jawab nahi mila.</p>`;
+        // AGAR ERROR HAI
+        if (data.error) {
+            outputDiv.innerHTML = `<p style="color:#ef4444;"><b>API Error:</b> ${data.error}</p>`;
+        } 
+        // AGAR JAWAB SAHI HAI
+        else if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+            let aiResponse = data.candidates[0].content.parts[0].text;
+            aiResponse = aiResponse.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+            outputDiv.innerHTML = `<h3 style="color:#3b82f6; margin-bottom:15px;">BuildWise AI Analysis</h3><p>${aiResponse.replace(/\n/g, '<br>')}</p>`;
+        } 
+        else {
+            outputDiv.innerHTML = `<p style="color:#ef4444;">Maaf kijiyega, AI se sahi jawab nahi mila. (Data format issue)</p>`;
         }
 
     } catch (error) {
-        outputDiv.innerHTML = `<p style="color:#ef4444;">Connection Error: API se rabta nahi ho saka. (${error.message})</p>`;
+        outputDiv.innerHTML = `<p style="color:#ef4444;"><b>Connection Error:</b> ${error.message}<br><br>Baraye meharbani apna Worker URL check karein.</p>`;
     } finally {
-        // Reset Button
         btn.disabled = false;
         btn.innerText = "Analyze Project";
     }
